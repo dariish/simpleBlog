@@ -95,7 +95,7 @@ button {
 
 @media only screen and (max-width: 800px) {
   .slide {
-    max-width: 100%;
+    max-width: 90%;
   }
   .slide-desc {
     width: 90%;
@@ -169,7 +169,7 @@ button:hover {
 }
 @media only screen and (max-width: 500px) {
   .articles {
-    width: 95%;
+    width: 90%;
   }
 }
 
