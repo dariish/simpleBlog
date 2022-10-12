@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --grey: #707070;
+  --orange: #ffaa00;
+  --light-orange: #f6c76b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  padding: 4%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--grey);
+}
+
+.container-flex {
+  display: flex;
+}
+
+.container-grid {
+  display: grid;
+}
+
+/*Slide css */
+.slide {
+  max-width: 70%;
+  margin: auto;
+  height: auto;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+.slide-desc {
+  width: 60%;
+}
+.slide-desc h2 {
+  padding: 2% 16% 2% 0;
+}
+
+.dots {
+  margin-top: 2%;
+  text-align: center;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 6px;
+  border: 1px solid var(--grey);
+  display: inline-block;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: var(--light-orange);
+}
+
+.dot.active {
+  background-color: var(--orange);
+}
+
+@media only screen and (max-width: 800px) {
+  .slide {
+    max-width: 100%;
+  }
+  .slide-desc {
+    width: 90%;
+  }
+  .slide-desc h2 {
+    padding: 2% 0 2% 0;
+  }
+  .dots {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .dots {
+    margin-top: 10%;
+  }
+}
+
+/* Main Section*/
+
+.main-container {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #f6f6f6;
+  height: 100%;
+}
+
+.articles {
+  width: 70%;
+  margin: auto;
+  /* grid-template-columns: repeat(3, 1fr);*/
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* row-gap: 5%;*/
+  column-gap: 10%;
+  row-gap: 50px;
+  justify-items: center;
+}
+
+.all-article {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.articles img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.article-desc {
+  max-width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+.tags {
+  font-size: 0.9rem;
+}
+.articles button {
+  width: 30%;
+  background-color: var(--orange);
+  display: inline;
+  padding: 7px 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 500px) {
+  .articles {
+    width: 95%;
+  }
+}
